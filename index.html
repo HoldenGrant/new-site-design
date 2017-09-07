@@ -31,10 +31,84 @@
             text-align: center;
             vertical-align: middle;
         }
+        .full-content{
+            height: 100%;
+            width: 100%;
+        }
+        .big-hello {
+            font-size: 19em;
+            /* font-size: 25.5vw; */
+            line-height: 252px;
+            font-family: 'renogare', serif;
+            color: #070d19;
+            font-weight: bolder;
+            letter-spacing: -18px;
+            text-shadow: 6px 6px 0px rgb(117, 133, 158);
+        }
+        .site-intro {
+            position: absolute;
+            bottom: 50px;
+            right: 20px;
+        }
+        #site-logo {
+            float: left;
+            padding: 20px;
+        }
+
+
+
+
+        #site-menu {
+            width: 50%;
+            height: 100%;
+            /*position: absolute;*/
+            z-index: 1;
+            position: relative;
+        }
+
+        #site-menu ul {
+            list-style: none;
+            float: right;
+        }
+        #site-menu ul li{
+            transition:.3s;
+        }
+        #site-menu ul li.active {
+            background: white;
+        }
+
+        .cat-display li{
+            display: none;
+            transition:.3s;
+        }
+        .cat-display li.active{
+            display: block;
+        }
+
+        ul.cat-nav {
+            float: left;
+        }
+
+        ul.cat-display {
+            float: right;
+        }
+
+        #site-content {
+            width: 50%;
+            height: 100%;
+            /*padding-left: 200px;*/
+        }
+        #site-content ul {
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
         </style>
     </head>
     <body>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <!-- <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,13 +130,43 @@
                     </li>
                 </ul>
             </div>
-        </nav>
+        </nav> -->
 
         <section id="home" class="content-container home-part center-center">
-            <div class="intro center-center">
+            <div id="site-menu" class="float-left">
+                <div id="site-logo">
+                    <img src="images/logo-white.png" class="img-fluid" width="140px">
+                </div>
+                <ul class="cat-nav left">
+                    <li class="cat1">my home</li>
+                    <li class="cat2">about me</li>
+                    <li class="cat3">things i do</li>
+                    <li class="cat4">talk to me</li>
+                </ul>
+                <div class="site-intro">
+                    <h1 class="big-hello">hello.</h1>
+                </div>
+            </div>
+            <div id="site-content" class="float-left">
+                <ul class="cat-display">
+                    <li class="cat1 full-content active">
+                        <div class="intro center-center">
                 <div class="center-item">
                     <h1>hello!</h1>
                 </div>
+            </div>
+                        <!-- <img class="card__image" srcset="https://elements-cover-images-0.imgix.net/cd03e282-e2e4-4fba-a232-e662adcdeead?w=433&amp;fit=max&amp;auto=compress%2Cformat&amp;s=6f9f6f1fcabcbace0c9c473c2d6f07f1 433w, https://elements-cover-images-0.imgix.net/cd03e282-e2e4-4fba-a232-e662adcdeead?w=632&amp;fit=max&amp;auto=compress%2Cformat&amp;s=90b2e3e687a321865c6fc5a1edd7f964 632w, https://elements-cover-images-0.imgix.net/cd03e282-e2e4-4fba-a232-e662adcdeead?w=710&amp;fit=max&amp;auto=compress%2Cformat&amp;s=9f2305326c8ec82ce675e1044e50d0a7 710w, https://elements-cover-images-0.imgix.net/cd03e282-e2e4-4fba-a232-e662adcdeead?w=1019&amp;fit=max&amp;auto=compress%2Cformat&amp;s=b31fbf18740ea80c8efce1e8df8d73de 1019w, https://elements-cover-images-0.imgix.net/cd03e282-e2e4-4fba-a232-e662adcdeead?w=2038&amp;fit=max&amp;auto=compress%2Cformat&amp;s=18198aa7b545e406254778d8461c37c0 2038w" sizes="(min-width: 1240px) 689px, 0.55vw" src="https://elements-cover-images-0.imgix.net/cd03e282-e2e4-4fba-a232-e662adcdeead?w=632&amp;fit=max&amp;auto=compress%2Cformat&amp;s=90b2e3e687a321865c6fc5a1edd7f964"> -->
+                    </li>
+                    <li class="cat2 full-content">
+                        <img class="card__image img-fluid" srcset="https://elements-cover-images-0.imgix.net/03f78817-7844-4bcf-94a9-f6d1d4e07b9d?w=433&amp;fit=max&amp;auto=compress%2Cformat&amp;s=df36932be6b5881e8ae7b4a29e17e527 433w, https://elements-cover-images-0.imgix.net/03f78817-7844-4bcf-94a9-f6d1d4e07b9d?w=710&amp;fit=max&amp;auto=compress%2Cformat&amp;s=75b8df32bd5ca457e59c57c75a7a2632 710w, https://elements-cover-images-0.imgix.net/03f78817-7844-4bcf-94a9-f6d1d4e07b9d?w=1019&amp;fit=max&amp;auto=compress%2Cformat&amp;s=0307f710ab69bb49deef64365921035d 1019w, https://elements-cover-images-0.imgix.net/03f78817-7844-4bcf-94a9-f6d1d4e07b9d?w=1370&amp;fit=max&amp;auto=compress%2Cformat&amp;s=ff5440e92e4a794a8aa84e414cf7c0e2 1370w, https://elements-cover-images-0.imgix.net/03f78817-7844-4bcf-94a9-f6d1d4e07b9d?w=2038&amp;fit=max&amp;auto=compress%2Cformat&amp;s=c0ff9e52eff343789b7cc07cf19b5799 2038w, https://elements-cover-images-0.imgix.net/03f78817-7844-4bcf-94a9-f6d1d4e07b9d?w=2740&amp;fit=max&amp;auto=compress%2Cformat&amp;s=9c8e46faab1f48563f7016114346b719 2740w" sizes="(min-width: 1240px) 689px, 0.55vw" src="https://elements-cover-images-0.imgix.net/03f78817-7844-4bcf-94a9-f6d1d4e07b9d?w=710&amp;fit=max&amp;auto=compress%2Cformat&amp;s=75b8df32bd5ca457e59c57c75a7a2632">
+                    </li>
+                    <li class="cat3 full-content">
+                        <img class="card__image img-fluid" srcset="https://elements-cover-images-0.imgix.net/c2325b32-5366-4685-b4f8-b383fec60880?w=433&amp;fit=max&amp;auto=compress%2Cformat&amp;s=762b1f4302df644f8571a5dca6a36ede 433w, https://elements-cover-images-0.imgix.net/c2325b32-5366-4685-b4f8-b383fec60880?w=632&amp;fit=max&amp;auto=compress%2Cformat&amp;s=481080a334453231af32dd5cf2929081 632w, https://elements-cover-images-0.imgix.net/c2325b32-5366-4685-b4f8-b383fec60880?w=710&amp;fit=max&amp;auto=compress%2Cformat&amp;s=ef87bb2fc3f3bd4bb21377c4e796666c 710w, https://elements-cover-images-0.imgix.net/c2325b32-5366-4685-b4f8-b383fec60880?w=1019&amp;fit=max&amp;auto=compress%2Cformat&amp;s=81dbdb8a8eeb3babe583d67b4b650c51 1019w, https://elements-cover-images-0.imgix.net/c2325b32-5366-4685-b4f8-b383fec60880?w=2038&amp;fit=max&amp;auto=compress%2Cformat&amp;s=abbed69d59773a6efb6602aabdcd0d01 2038w" sizes="(min-width: 1240px) 689px, 0.55vw" src="https://elements-cover-images-0.imgix.net/c2325b32-5366-4685-b4f8-b383fec60880?w=632&amp;fit=max&amp;auto=compress%2Cformat&amp;s=481080a334453231af32dd5cf2929081">
+                    </li>
+                    <li class="cat4 full-content">
+                        <img class="card__image img-fluid" srcset="https://elements-cover-images-0.imgix.net/90045942-698c-4178-bf84-7a792e88258c?w=433&amp;fit=max&amp;auto=compress%2Cformat&amp;s=f80d66ef2ac4ae8afb85eef7ef507e9a 433w, https://elements-cover-images-0.imgix.net/90045942-698c-4178-bf84-7a792e88258c?w=632&amp;fit=max&amp;auto=compress%2Cformat&amp;s=dcdd90e9b1d21f0ddabb61415679fd43 632w, https://elements-cover-images-0.imgix.net/90045942-698c-4178-bf84-7a792e88258c?w=710&amp;fit=max&amp;auto=compress%2Cformat&amp;s=d8381854a3590db09b3966aefcf5a89f 710w, https://elements-cover-images-0.imgix.net/90045942-698c-4178-bf84-7a792e88258c?w=1019&amp;fit=max&amp;auto=compress%2Cformat&amp;s=44400d5d9691b76ea3189ea9c68ba060 1019w, https://elements-cover-images-0.imgix.net/90045942-698c-4178-bf84-7a792e88258c?w=2038&amp;fit=max&amp;auto=compress%2Cformat&amp;s=0b17e9bed73cca37b38d1157a4ae9ed1 2038w" sizes="(min-width: 1240px) 689px, 0.55vw" src="https://elements-cover-images-0.imgix.net/90045942-698c-4178-bf84-7a792e88258c?w=632&amp;fit=max&amp;auto=compress%2Cformat&amp;s=dcdd90e9b1d21f0ddabb61415679fd43">
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -71,5 +175,37 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $('#site-menu ul li:first-child').addClass('active');
+            });
+            $('.cat-nav > li').mouseenter(function () {
+                var same_class = this.className;
+
+                //if(!$('#site-menu ul li:first-child').hasClass('active')){
+                    //alert('has class2');
+                    //$(this).addClass('active');
+                //}else{
+                    $(this).toggleClass('active').siblings().removeClass('active');
+                    console.log(same_class);
+                //}
+
+                
+
+                $('.cat-display').find('li.'+same_class).toggleClass('active').siblings().removeClass('active');
+
+                
+            });
+
+            // $('.cat-nav > li').mouseout(function () {
+            //  var same_class = this.className;
+            //  if ( $('.cat-display > li.'+same_class).hasClass('active') ) {
+            //      $('.cat-nav > li.'+same_class).toggleClass('test');
+            //     };
+            // });
+
+
+        </script>
     </body>
 </html>
